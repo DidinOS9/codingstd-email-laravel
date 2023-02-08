@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Hello !</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusamus pariatur labore esse id, atque aliquid quasi laboriosam incidunt, earum velit quisquam minima dignissimos soluta commodi, neque ratione. Dolores, obcaecati.</p>
+        <p>{{$body}}</p>
         <span>Thank you !</span>
         <strong>Brillearn</strong>
     </div>

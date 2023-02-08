@@ -16,9 +16,12 @@ class HelloMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+
+    public $body;
+    
+    public function __construct($body)
     {
-        //
+        $this->body = $body;
     }
 
     /**
@@ -28,6 +31,6 @@ class HelloMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.mail-template');
+        return $this->subject('Welcome to Brilllearn')->view('mail.mail-template');
     }
 }

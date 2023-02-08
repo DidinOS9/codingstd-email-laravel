@@ -18,9 +18,9 @@ class EmailController extends Controller
         return view('data-email');
     }
 
-    public function send()
+    public function send(Request $request)
     {
-        Mail::to('didinoktaviandasetiawan@gmail.com')->send(new HelloMail);
+        Mail::to($request->email)->send(new HelloMail($request->body));
         return back();
     }
 }
