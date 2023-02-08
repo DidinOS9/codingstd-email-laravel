@@ -10,12 +10,17 @@
                 <th>Action</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Hazel</td>
-                    <td>hei@gmail.com</td>
-                    <td><button class="btn btn-warning">Send Mail</button></td>
-                </tr>
+                @foreach ($products as $product)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $product->product_name }}</td>
+                        <td>{{ $product->customer_email }}</td>
+                        <td><a href="/send-product-mail/{{ $product->id }}" class="btn btn-warning">
+                                Send Mail
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

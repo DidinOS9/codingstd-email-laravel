@@ -18,3 +18,5 @@ Route::get('/', 'EmailController@index');
 Route::get('/mail-data', 'EmailController@dataEmail');
 
 Route::get('/send-mail', 'EmailController@send');
+
+Route::get('/send-product-mail/{id}', 'EmailController@sendProductEmail');
